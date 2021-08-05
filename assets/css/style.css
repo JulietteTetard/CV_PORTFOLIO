@@ -19,10 +19,10 @@ html {
 
 @font-face {
     font-family: 'AktivGrotesk-Regular';
-    src: url('/src/fonts/AktivGrotesk-Regular.ttf') format('truetype');
+    src: url('/src/fonts/AktivGrotesk-Regular.ttf');
  
     font-family: 'self';
-    src: url('/src/fonts/bretagne_self-modern_italic.otf') format('truetype');
+    src: url('/src/fonts/bretagne_self-modern_italic.otf');
  
 
 }
