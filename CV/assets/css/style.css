@@ -1,0 +1,259 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==============
+General Styles
+================*/
+
+html {
+    background-color: #C6C5F6 ;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk-Regular';
+    src: url('../../src/fonts/AktivGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'self';
+    src: url('../../src/fonts/bretagne_self-modern_italic.otf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+body{
+    background-color: #C6C5F6 ;
+    font-family : "AktivGrotesk-Regular", sans-serif;
+    font-style: normal ;
+    font-size: 1.8rem;
+    line-height: 2.61rem;
+}
+
+div, nav {
+    background-color: #C6C5F6 ;
+}
+
+h2, h1{
+    font-family :"Self Modern", serif;
+    font-size: 2rem;
+    font-weight: inherit;
+}
+.link2 {
+    color: black;
+    text-decoration: none;
+}
+.text-right{
+    text-align: right;
+}
+
+/* ==============
+Conteneur
+================*/
+
+.parent {
+    display: grid;
+    grid-template-columns: 25vw 75vw;
+    grid-template-rows:  15%  300px  auto ;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin: 10px;
+}
+
+/* ==============
+Ligne 1
+================*/
+.one {
+    grid-column: 1 ;
+    grid-row: 1;
+}
+.two  {
+    grid-column: 2 ;
+    grid-row: 1 ;
+    margin-right: 5vw;
+}
+
+.presentation, .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+    line-height: 1.2 ;
+}
+.lang{
+    width :20%;
+    margin-top: 10px;
+    color: white;
+}
+.pres{
+    width: 80%;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+
+/* ==============
+Ligne 2
+================*/
+.three {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    font-size: 1vw;
+    line-height: 1.4 ;
+}
+.networks{
+    margin-top: 55px;
+}
+
+.content{
+    grid-column: 2;
+    grid-row : 2 /5;
+    font-size :1vw;
+    line-height: 1.4;
+}
+.lead{
+    font-family: AktivGrotesk-Regular;
+    line-height: 1;
+}
+.studies, .xpriences, .skills{
+    width : 30%;
+    position: relative;
+}
+.contents{
+    margin-top: 15px;
+    padding-right: 10%;
+}
+
+
+/* ==========
+Défilement
+=============*/
+
+.text-defile {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Fonctionne avec toutes les tailles */
+    width: 100%;
+    top: 40%;
+    text-transform: uppercase;
+}
+
+.defile {
+    white-space: nowrap;
+    font-size: 18px;
+    animation: scrollTxt 60s linear infinite;
+    font-family :"Self Modern", serif;
+}
+
+@keyframes scrollTxt {
+    0%{
+        transform: translate(0%, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* ==========
+Navigation
+=============*/
+.link {
+    color: white;
+}
+li{
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+
+/* ==========
+Textes
+=============*/
+
+#col {
+    column-count: 3;
+    column-width: 200px;
+}
+
+
+
+/* ==========
+Apparitions/disparitions
+=============*/
+span {
+    display: none;
+}
+.text-right{
+    display: flex;
+
+}
+
+/* ==========
+Rotation
+=============*/
+.anim-nav {
+    border-radius: 100px;
+    margin-left: 0px;
+    -webkit-animation:spin 20s linear infinite;
+    -moz-animation:spin 20s linear infinite;
+    animation:spin 20s linear infinite;
+    width : 60%;
+    opacity: 0.8;
+    visibility:inherit;
+    transform: translate3d(Opx, 0px, 0px) ;
+    rotate();
+}
+.formation{
+    position: absolute;
+    top: 390px;
+    left: -100px;
+}
+.exp{
+    position: absolute;
+    top: 30px;
+    left: -140px;
+}
+.com{
+    position: absolute;
+    top: 240px;
+    left: -90px;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+
+
+
+/* ==========
+Responsive
+=============*/
+@media screen and (max-width:768px) {
+    p, .date {
+        font-size: small;
+    }
+
+    .anim-nav{
+        width: 90%;
+    }
+    .content{
+        margin: 10px;
+    }
+}
+
+/* ==========
+Erreur
+=============*/
+
+.erreur {
+    color: #D8000C;
+}
