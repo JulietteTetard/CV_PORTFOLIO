@@ -20,12 +20,10 @@ html {
 @font-face {
     font-family: 'AktivGrotesk-Regular';
     src: url('/src/fonts/AktivGrotesk-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+ 
     font-family: 'self';
     src: url('/src/fonts/bretagne_self-modern_italic.otf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+ 
 
 }
 
